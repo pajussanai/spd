@@ -1,0 +1,25 @@
+<!doctype html>
+<html> <!-- directive -->
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+	<p>Try to change the names.</p>
+
+	<div ng-app="" np-controller="personController">
+		First Name: <input type="txt" ng-model="firstName">
+		Last Name: <input type="txt" ng-model="lastName"><br>
+		Full Name: {{firstName + " " + lastName}}
+
+	</div>
+
+	<script>
+		function personController($scope){
+			$scope.firstName = "Jiyun";
+			$scope.lastName = "Kim";
+		}
+	</script>
+</body>
+</html>
